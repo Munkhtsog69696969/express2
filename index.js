@@ -23,6 +23,8 @@ const playlistRouter=require("./routes/playlistRouter");
 
 const songRouter=require("./routes/songRouter");
 
+const userRouter=require("./routes/userRouter");
+
 connect();
 
 app.use("/", router);
@@ -31,6 +33,7 @@ app.use("/",playlistRouter);
 
 app.use("/",songRouter);
 
+app.use("/",userRouter);
 
 app.listen(port,()=>{
     console.log("Server listening at",port);

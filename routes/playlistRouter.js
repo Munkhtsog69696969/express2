@@ -12,10 +12,10 @@ const {getSpecificPlaylist}=require("../controller/playlistController");
 
 playlistRouter
     .get("/playlists",getPlaylists)
-    .put("/updatePlaylists",updatePlaylist)
-    .delete("/deletePlaylist",deletePlaylist)
+    .put("/updatePlaylists/:id",updatePlaylist)
+    .delete("/deletePlaylist/:id",deletePlaylist)
     .post("/createNewPlaylist",createNewPlaylist)
     .post("/createPlaylist",createPlaylist)
-    .get("/getSpecificPLaylist",getSpecificPlaylist)
+    .get("/getSpecificPlaylist/:id",getSpecificPlaylist)
 
 module.exports=playlistRouter;

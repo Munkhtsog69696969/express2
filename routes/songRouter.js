@@ -12,10 +12,10 @@ const {getSpecificSong}=require("../controller/songController");
 
 songRouter
     .get("/songs",getSongs)
-    .put("/updateSongs",updateSong)
-    .delete("/deleteSong",deleteSong)
-    .post(" /createNewSong",createNewSong)
+    .put("/updateSongs/:id",updateSong)
+    .delete("/deleteSong/:id",deleteSong)
+    .post("/createNewSong",createNewSong)
     .post("/createSong",createSong)
-    .get("/getSpecificSong",getSpecificSong)
+    .get("/getSpecificSong/:id",getSpecificSong)
     
 module.exports=songRouter;
